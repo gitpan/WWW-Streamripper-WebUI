@@ -1,12 +1,10 @@
-use inc::Module::Install;
-
 use strict;
-
+use inc::Module::Install;
 name('WWW-Streamripper-WebUI');
 abstract('Web interface to streamripper');
 author('xern <xern@cpan.org>');
 license('perl');
-version('0.02');
+version('0.03');
 
 requires('perl'             => 5.006);
 requires('Test::More');

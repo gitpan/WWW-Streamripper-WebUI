@@ -36,7 +36,7 @@ elsif($type eq 'daemon'){
 
   while(1){
     my $schedule = YAML::LoadFile("$basedir/../config/stream_schedule") or die "Schedule?";
-
+    chmod 0666, "$basedir/../config/stream_schedule";
     YAML::DumpFile($pid_file, $$);
     YAML::DumpFile($sch_file, $schedule);
     
@@ -52,7 +52,8 @@ elsif($type eq 'daemon'){
 	
 	my $pid = fork();
 	if(!$pid){
-	  system($streamripper_bin, $source->{$id}->{url}, '-l', $t->[1], '-s');
+	  exec($streamripper_bin, $source->{$id}->{url}, '-l', $t->[1], '-s');
+	  exit;
 	}
 	last;
       }

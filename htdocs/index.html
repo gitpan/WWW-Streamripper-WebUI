@@ -26,16 +26,16 @@
  <tr>
   <td>
 % if( $ARGS{c} eq 'li'){
-   <& inc/incoming.inc &>
+   <& inc/incoming.inc, %ARGS &>
 % } elsif( $ARGS{c} eq 'ls'){
-   <& inc/sources.inc &>
+   <& inc/sources.inc, %ARGS &>
 % } elsif( $ARGS{c} eq 'sa'){
-   <& inc/seealso.inc &>
+   <& inc/seealso.inc, %ARGS &>
 % } elsif( $ARGS{c} eq 'lsch'){
-   <& inc/listschedule.inc &>
+   <& inc/listschedule.inc, %ARGS &>
 % }
 % else {
-   <& inc/listfiles.inc &>
+   <& inc/listfiles.inc, %ARGS &>
 % }
 </table>
 <& inc/postamble.inc &>
