@@ -1,0 +1,27 @@
+--- #YAML:1.0
+baynews9:
+  home: http://www.baynews9.com/site/index.html
+  name: Bay News @ Work
+  url: http://24.94.156.246/
+cjsw:
+  home: http://cjsw.com/main.html
+  name: CJSW Radio 90.9 FM
+  sch: http://cjsw.com/programming/completeguide.html
+  url: http://streams.benow.ca:80/cjsw
+kcrw_news:
+  home: http://www.kcrwworldnews.com/
+  name: KCRW WorldNews
+  sch: |-
+    http://www.kcrwworldnews.com/worldnews/worldnews_schedule.html
+  url: http://205.188.234.68:8020/
+kcrw_simulcast:
+  home: http://kcrw.com/grid/
+  name: KCRW Simulcast
+  sch: http://kcrw.com/grid/kcrw_schedule.html
+  url: http://64.236.34.196:80/stream/8018
+streamsoundtrack:
+  home: http://www.streamingsoundtracks.com/
+  name: StreamingSoundtracks-com
+  sch: |-
+    http://www.streamingsoundtracks.com/modules.php?name=Schedule
+  url: http://64.62.252.140:8944

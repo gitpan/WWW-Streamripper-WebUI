@@ -1,0 +1,24 @@
+name: WWW-Streamripper-WebUI
+version: 0.01
+abstract: Web interface to streamripper
+author: xern <xern@cpan.org>
+license: perl
+distribution_type: module
+requires:
+  perl: 5.6.0
+  Test::More: 0
+  IO::All: 0.14
+  YAML: 0.35
+  URI::Escape: 3.22
+  Proc::Killfam: 1.0
+  File::Touch: 0.01
+  MP3::Info: 1.02
+  Digest::MD2: 2
+  HTML::Mason: 1.25
+  Proc::ProcessTable: 0.39
+  Archive::Tar: 0.23
+  Proc::Daemon: 0.02
+no_index:
+  directory:
+    - inc
+generated_by: Module::Install version 0.33

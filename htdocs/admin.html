@@ -1,0 +1,63 @@
+<%perl>
+ my $title = "WWW::Streamripper::WebUI::Admin";
+</%perl>
+
+<html>
+<& inc/header.inc, title => $title &>
+
+
+<body bgcolor="#ffffff" link="#990000" vlink="#B10010" alink="#B10010" >
+
+
+<h1> <a href='admin.html'> <% $title %> </a> </h1>
+
+<table>
+ <tr>
+  <td width=15% valign=top>
+   <table>
+    <tr> <td> <a href="admin.html?c=lf"> List ripped files </a>
+    <tr> <td> <a href="admin.html?c=li"> List incoming </a>
+    <tr> <td> <a href="admin.html?c=ls"> List sources </a>
+    <tr> <td> <a href="admin.html?c=lsch"> List schedules </a>
+   </table>
+   <hr>
+   <table>
+    BACKEND:
+    <tr> <td> <a href="admin.html?c=shb"> Status </a>
+    <tr> <td> <a href="admin.html?c=rb"> Run as daemon </a>
+   </table>
+   <hr>
+   <table>
+    <tr> <td> <a href="index.html"> USER'S HOME </a>
+   </table>
+  </td>
+  <td valign=top>
+% if($ARGS{c} eq 'lf'){
+   <& inc/listfiles.inc, is_admin => 1, %ARGS &>
+% } elsif( $ARGS{c} eq 'li'){
+   <& inc/incoming.inc, is_admin => 1, %ARGS &>
+% } elsif( $ARGS{c} eq 'ls'){
+   <& inc/sources.inc, is_admin => 1, %ARGS &>
+% } elsif( $ARGS{c} eq 'rb' ){
+   <& inc/run_ripper.inc, is_admin => 1, %ARGS &>
+% } elsif( $ARGS{c} eq 'shb' ){
+   <& inc/show_process.inc, is_admin => 1, %ARGS &>
+% } elsif( $ARGS{c} eq 'rsch' ){
+   <& inc/reschedule.inc, is_admin => 1, %ARGS &>
+% } elsif( $ARGS{c} eq 'lsch' ){
+   <& inc/listschedule.inc, is_admin => 1, %ARGS &>
+% }
+
+  </td>
+ </tr>
+ <tr>
+  <td colspan=2>
+   <& inc/postamble.inc &>
+  </td>
+ </tr>
+
+</table>
+
+
+</body>
+</html>

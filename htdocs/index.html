@@ -1,0 +1,44 @@
+<%perl>
+ my $title = "WWW::Streamripper::WebUI";
+</%perl>
+
+<html>
+<& inc/header.inc, title => $title, timeout => 600 &>
+
+
+
+<body bgcolor="#ffffff" link="#990000" vlink="#B10010" alink="#B10010" >
+
+
+<h1> <a href='index.html'> <% $title %> </a> </h1>
+
+<table>
+ <tr>
+  <td width=15% valign=top>
+   <table>
+    <tr>
+     <td> <a href="index.html?c=lf"> &lt; List ripped files &gt; </a>
+     <td> <a href="index.html?c=li"> &lt; List incoming &gt; </a>
+     <td> <a href="index.html?c=ls"> &lt; List sources &gt; </a>
+     <td> <a href="index.html?c=lsch"> &lt; List schedules &gt; </a>
+     <td> <a href="index.html?c=sa"> &lt; See also &gt; </a>
+   </table>
+ <tr>
+  <td>
+% if( $ARGS{c} eq 'li'){
+   <& inc/incoming.inc &>
+% } elsif( $ARGS{c} eq 'ls'){
+   <& inc/sources.inc &>
+% } elsif( $ARGS{c} eq 'sa'){
+   <& inc/seealso.inc &>
+% } elsif( $ARGS{c} eq 'lsch'){
+   <& inc/listschedule.inc &>
+% }
+% else {
+   <& inc/listfiles.inc &>
+% }
+</table>
+<& inc/postamble.inc &>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+Changes
+htdocs/admin.html
+htdocs/bin/get_streams.pl
+htdocs/config/stream_schedule
+htdocs/config/stream_source
+htdocs/css/streamripper.css
+htdocs/inc/header.inc
+htdocs/inc/incoming.inc
+htdocs/inc/listfiles.inc
+htdocs/inc/listschedule.inc
+htdocs/inc/postamble.inc
+htdocs/inc/reschedule.inc
+htdocs/inc/run_ripper.inc
+htdocs/inc/seealso.inc
+htdocs/inc/show_process.inc
+htdocs/inc/sources.inc
+htdocs/index.html
+lib/WWW/Streamripper/WebUI.pm
+Makefile.PL
+MANIFEST			This list of files
+MANIFEST.SKIP
+META.yml
+README
+test.pl
+mkarchive.pl

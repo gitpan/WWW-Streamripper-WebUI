@@ -1,0 +1,19 @@
+WWW-Streamripper-WebUI
+======================
+
+
+INSTALLATION
+
+ mkdir ~/htdocs/streamripper
+ cd ~/htdocs/streamripper
+ perl -MWWW::Streamripper::WebUI -e 'install'
+
+And files will be installed in ~/htdocs/streamripper. Enjoy it!
+
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2004 by Yung-chung Lin (a.k.a. xern) <xern@cpan.org>
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself
