@@ -30,12 +30,12 @@ if($ARGS{o} eq 'd' && defined $ARGS{item}){
   undef $sch->{$ARGS{id}}->[$ARGS{item}];
   @{$sch->{$ARGS{id}}} = grep{ ref } @{$sch->{$ARGS{id}}};
   YAML::DumpFile("$cwd/../config/stream_schedule", $sch);
-  print "<script> window.location = 'admin.html?c=sch&id=$ARGS{id}'; </script>";
+  print "<script> window.location = 'admin.html?c=rsch&id=$ARGS{id}'; </script>";
 }
 if($ARGS{starttime} && $ARGS{length} && $valid_input){
   push @{$sch->{$ARGS{id}}}, [ $ARGS{starttime}, $ARGS{length}, $ARGS{day} ];
   YAML::DumpFile("$cwd/../config/stream_schedule", $sch);
-  print "<script> window.location = 'admin.html?c=sch&id=$ARGS{id}'; </script>";
+  print "<script> window.location = 'admin.html?c=rsch&id=$ARGS{id}'; </script>";
 }
 
 my $id = $ARGS{id};
@@ -47,7 +47,7 @@ my $s = $source->{$id};
 % foreach (@{$sch->{$id}}){
    <tr>
     <td>
-      <a href='admin.html?c=sch&id=<% $ARGS{id} %>&o=d&item=<% $cnt %>'>
+      <a href='admin.html?c=rsch&id=<% $ARGS{id} %>&o=d&item=<% $cnt %>'>
         delete &gt;&gt;
       </a>
     <td> <% $_->[0] %>
@@ -63,7 +63,7 @@ my $s = $source->{$id};
 
 <h2> ADD NEW SCHEDULE </h2>
 
-<form name='addschedule' action='admin.html?c=sch&id=<% $ARGS{id} %>' method="post" enctype="application/x-www-form-urlencoded">
+<form name='addschedule' action='admin.html?c=rsch&id=<% $ARGS{id} %>' method="post" enctype="application/x-www-form-urlencoded">
 <table>
 <tr> <td> START TIME <td> <input type='text' name='starttime' > <td> ( e.g. "00:00", "12:30" )
 <tr> <td> LENGTH <td> <input type='text' name='length'> <td> (secs)

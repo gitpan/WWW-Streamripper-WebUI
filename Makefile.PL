@@ -6,7 +6,7 @@ name('WWW-Streamripper-WebUI');
 abstract('Web interface to streamripper');
 author('xern <xern@cpan.org>');
 license('perl');
-version('0.01');
+version('0.02');
 
 requires('perl'             => 5.006);
 requires('Test::More');

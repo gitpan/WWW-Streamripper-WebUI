@@ -3,3 +3,6 @@ Revision history for Perl extension WWW::Streamripper::WebUI.
 0.01  Tue, 23 Mar 2004 23:45:43 +0800
 	- initial release
 
+0.02  Wed, 24 Mar 2004 00:15:27 +0800
+	- bug in inc/reschedule.inc fixed
+	- tests for attributes of config/* added

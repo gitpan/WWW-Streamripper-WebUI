@@ -7,6 +7,7 @@ use File::Copy;
 use Data::Dumper;
 use Proc::Daemon;
 use YAML;
+use IO::All;
 
 Proc::Daemon::Init;
 
@@ -35,7 +36,7 @@ elsif($type eq 'daemon'){
 
   while(1){
     my $schedule = YAML::LoadFile("$basedir/../config/stream_schedule") or die "Schedule?";
-    
+
     YAML::DumpFile($pid_file, $$);
     YAML::DumpFile($sch_file, $schedule);
     

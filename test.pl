@@ -14,3 +14,7 @@ use Fcntl ':mode';
 foreach (qw(config mp3 run)){
     ok(S_IRWXU && S_IRWXG && S_IRWXO);
 }
+
+foreach (qw(config/stream_schedule config/stream_source)){
+    ok(S_IRUSR && S_IWUSR && S_IRGRP && S_IWGRP && S_IROTH && S_IWOTH);
+}
